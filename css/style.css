@@ -1,0 +1,756 @@
+/*======================
+   01. Google fonts
+========================*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/*======================
+   02. Basic css
+========================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+a,
+button,
+img {
+  transition: 0.3s;
+}
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+strong,
+i,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+  background-color: #fff;
+  color: #333b55;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* page loader  */
+#preloader {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader3 {
+  width: 6rem;
+  height: 6rem;
+  display: inline-block;
+  padding: 0rem;
+  text-align: left;
+}
+
+.loader3 span {
+  position: absolute;
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  background: #f33737;
+  -webkit-animation: loader3 1.5s linear infinite;
+  animation: loader3 1.5s linear infinite;
+}
+
+.loader3 span:last-child {
+  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+}
+
+@keyframes loader3 {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loader3 {
+  0% {
+    -webkit-transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+/*Hamburger-menu START CSS*/
+.hamburger-menu {
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  width: 3rem;
+  margin-left: auto;
+}
+.hamburger-menu span {
+  background: #847631;
+  width: 100%;
+  height: 0.3rem;
+  display: block;
+  margin: 0.5rem 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+}
+.hamburger-menu .line-top.current {
+  -webkit-transform: translateY(0.82rem) rotate(135deg);
+  -ms-transform: translateY(0.82rem) rotate(135deg);
+  transform: translateY(0.82rem) rotate(135deg);
+}
+.hamburger-menu .line-center.current {
+  opacity: 0;
+}
+.hamburger-menu .line-bottom.current {
+  -webkit-transform: translateY(-0.82rem) rotate(-135deg);
+  -ms-transform: translateY(-0.82rem) rotate(-135deg);
+  transform: translateY(-0.82rem) rotate(-135deg);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1024;
+  width: 100%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  padding: 2rem 0;
+  background-color: floralwhite;
+}
+
+/*sticky START CSS*/
+header.sticky {
+  -webkit-box-shadow: 0 0.8rem 2rem 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0.8rem 2rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.8rem 2rem 0 rgba(0, 0, 0, 0.1);
+}
+
+#menu {
+  text-align: center;
+}
+
+#menu li {
+  display: inline-block;
+  color: #fff;
+}
+
+#menu li a {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 0 2rem;
+}
+
+#menu li:last-child a {
+  padding-right: 0;
+}
+
+#menu > li > a.active,
+#menu > li > a:hover {
+  color: #9e6919;
+}
+
+/*return-to-top START CSS*/
+
+.back-to-top {
+  font-size: 2.4rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  text-align: center;
+  display: none;
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  border-radius: 50%;
+  background: #f2da55;
+  z-index: 1000;
+}
+
+.back-to-top i {
+  color: #fff;
+}
+.logo img {
+  width: 11rem;
+}
+
+button.btn.dropdown-toggle.show {
+  width: 70px;
+  border: none;
+  padding: 0px;
+  height: 25px;
+  margin-right: -1.5rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+button.btn.btn-secondary.dropdown-toggle {
+  height: 40px;
+  font-size: 12px;
+}
+
+.drop_botton {
+  display: flex;
+  justify-content: space-between;
+}
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  font-size: 20px;
+  margin-right: 4px;
+}
+
+button.btn {
+  text-align: center;
+  border: 0px;
+  padding: 10px;
+}
+.right_button {
+  background-color: #ff3583;
+}
+
+.right_button .btn a {
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+}
+
+.hero-section {
+  margin-top: 100px;
+}
+main {
+  padding-top: 6.9rem;
+}
+.home_section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25rem 0;
+  color: #ffffff;
+}
+.home_section h1 {
+  max-width: 74.8rem;
+  font-weight: 500;
+  font-size: 6.4rem;
+  margin-bottom: 2.4rem;
+}
+.home_section span {
+  background-color: #ff3583;
+  color: white;
+}
+/* Start murud section */
+.lorem {
+  display: flex;
+  gap: 24px;
+}
+.lorem a {
+  color: black;
+  font-weight: 600;
+}
+.row {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+.row > div {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.murud {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50rem;
+  padding: 14rem;
+}
+.murud h3 {
+  font-size: 4rem;
+  color: #000000;
+  font-weight: 600;
+}
+.murud p {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+/* end murud section */
+
+.precision_unlocked {
+  padding: 12.8rem 0;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-top: 4rem;
+}
+.pree_positin {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 72rem;
+}
+.unlock {
+  max-width: 70rem;
+}
+.unlock h4 {
+  font-size: 4.4rem;
+  margin-bottom: 1.6rem;
+  font-weight: 500;
+}
+.unlock p {
+  font-size: 2.6rem;
+  margin-bottom: 5.2rem;
+}
+.prec_logo img {
+  width: 19.5rem;
+}
+.prec_logo img:not(:last-child) {
+  margin-right: 2rem;
+}
+/* Start precisition Section */
+.precisition {
+  margin-top: 4rem;
+  background-image: url("../img/background mudud.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.precisition img {
+  width: 80rem;
+}
+.precisition p {
+  font-size: 2.6rem;
+}
+.precision_text {
+  width: 81rem;
+  color: #ffffff;
+  margin-top: 10.6rem;
+}
+.precisition h2 {
+  font-size: 5.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+/* End precisition Section */
+/* Start section News Updated */
+.news_update {
+  margin-top: 4rem;
+}
+.news_update h4 {
+  font-size: 5.2rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+.news_update span {
+  font-size: 2.4rem;
+  color: #828282;
+  margin-bottom: 1.6rem;
+}
+.news_update h2 {
+  font-size: 4.4rem;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 2.3rem;
+}
+.news_update p {
+  font-size: 2.6rem;
+  color: #828282;
+}
+.more_news {
+  color: #ff3583;
+  margin-top: 2.4rem;
+  display: block;
+}
+/* End section News Updated */
+/* // */
+
+.secend .image_bottom img {
+  width: 100%;
+}
+
+/* Group 11 */
+
+/* Start corousel_area */
+.corousel_area {
+  margin-top: 4rem;
+}
+h4.coustomer {
+  font-size: 5.2rem;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 5rem;
+}
+.icon_text .all_docoment {
+  padding: 4rem 4rem 3.8rem 4rem;
+  background-color: #f7f7f7;
+}
+.fas_fa i {
+  border: 1px solid;
+  background-color: #f2da55;
+  font-size: 1rem;
+  padding: 2px;
+  border-radius: 2px;
+}
+.fas_fa span {
+  font-size: 1rem;
+  padding: 2px;
+}
+.hear_hello h5 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #000000;
+  padding: 0.51rem 0;
+}
+.hear_hello p {
+  font-size: 2rem;
+}
+.hear_hello {
+  margin-bottom: 3.2rem;
+}
+.hear_text p {
+  font-size: 2rem;
+}
+
+.icon_text .bot_ico {
+  display: flex;
+  gap: 3rem;
+}
+.bot_ico {
+  margin-top: 2rem;
+  width: 100px;
+  display: flex;
+  gap: 2rem;
+}
+.left {
+  padding: 0.1rem 0.9rem;
+  border: 1px solid;
+  width: 41px;
+  text-align: center;
+}
+
+.right {
+  padding: 0.1rem 0.9rem;
+  border: 1px solid;
+  background-color: grey;
+  color: white;
+  width: 41px;
+  text-align: center;
+}
+
+/* End corousel_area */
+/* Start footer section */
+
+.top_footer_section {
+  margin-top: 3rem;
+  background-color: #333333;
+  padding: 4rem 0;
+}
+.foter_logo img {
+  width: 24rem;
+  margin-top: 7.4rem;
+  margin-bottom: 1.6rem;
+}
+
+p.fot_text {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 12rem;
+}
+
+.all_icon {
+  display: flex;
+  gap: 2rem;
+}
+.fac {
+  background-color: #474747;
+  padding: 9px 9px;
+}
+.fac i {
+  color: white;
+}
+.social_mideya {
+  margin-top: 10rem;
+}
+p.sosal {
+  color: white;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+p.get {
+  color: white;
+  font-size: 2.4rem;
+  margin-top: 10rem;
+}
+.footer_bottom {
+  text-align: center;
+  margin-top: 6rem;
+  color: white;
+  font-size: 10px;
+}
+.inputt_areya{
+  margin-top: 10rem;
+}
+.ba_ton {
+  width: 30%;
+  position: relative;
+}
+.ba_ton :first-child input {
+  font-size: 12px;
+  padding: 6px 10px 6px 30px;
+  border-radius: 5px 0px 0px 5px;
+  border: none;
+  height: 40px;
+}
+.ba_ton :nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 30%;
+}
+.ba_ton :nth-child(2) i {
+  position: absolute;
+  color: #ff3583;
+  left: 6px;
+  top: 0px;
+}
+button.bott_last {
+  position: absolute;
+  right: -11rem;
+  top: 0px;
+  height: 100%;
+  border: none;
+  background-color: #ff3583;
+  color: white;
+  font-size: 12px;
+  width: 7rem;
+  padding: 0px;
+}
+
+span.copy-text {
+  padding: 2.5rem;
+  background-color: #474747;
+  font-size: 1.6rem;
+}
+span {
+  font-size: 6rem;
+  padding: 1.5rem;
+}
+/* end footer section */
+/* ############ Murud Page ############ */
+
+.redifine {
+  align-items: center;
+}
+.redifine h5 {
+  font-size: 27px;
+  text-align: center;
+  font-family: "Font Awesome 5 Pro";
+  margin-top: 2rem;
+  font-weight: 600;
+}
+.redifine p {
+  font-size: 13px;
+  text-align: center;
+  padding: 1rem 42rem;
+  font-family: sans-serif;
+  color: gray;
+}
+
+.murud_section .redefind_home {
+  height: 61rem;
+}
+.murud.mt {
+  margin-top: 7rem;
+}
+.last_imagss {
+}
+.ways {
+  text-align: center;
+  width: 100%;
+  display: flow;
+  font-size: 26px;
+  margin: 4rem;
+  font-weight: 600;
+  color: black;
+}
+
+/* Reliability, Tested */
+.Durability {
+}
+.reli_dure {
+  text-align: center;
+  padding: 3rem 42rem 3rem;
+}
+.reli_dure h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 1rem 0rem 3rem;
+  color: black;
+}
+.reli_dure p {
+  font-size: 15px;
+  font-family: sans-serif;
+  color: gray;
+}
+.scren_lock img {
+  width: 100%;
+}
+/* Reliability, Tested */
+
+.unlock_tools {
+  padding: 40px 20px;
+}
+
+.most {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+p.textt {
+  margin-top: 1rem;
+}
+.the_most {
+  height: 350px;
+  padding: 5rem 0rem 0rem;
+  background-color: #f7f7f7;
+  margin-top: 2rem;
+}
+/* precision_unlocked */
+.lock_un {
+  background-color: white;
+  padding: 20rem 0rem 10rem 0rem;
+}
+.lock_un .precision_header {
+  color: #000000;
+  font-weight: 600;
+}
+.lock_un .precision_text {
+  color: gray;
+  font-size: 1.6rem;
+}
+/* precision_unlocked */
+
+/* holleykey_dashbord recommend */
+.recommend {
+  background-color: #f7f7f7;
+}
+.recommend h2 {
+  font-size: 3.6rem;
+  text-align: center;
+  color: #000000;
+  padding: 7rem 0rem 5rem;
+}
+/* holleykey_dashbord recommend */
+
+/* Technical Specifications */
+.tech_cal {
+  background-color: #f7f7f7;
+  padding: 3rem 0rem 0rem;
+}
+.top_tec {
+  text-align: center;
+}
+.top_tec h2 {
+  font-size: 3.6rem;
+  color: #000000;
+  margin-top: 2rem;
+}
+.top_tec p {
+  padding: 1rem 46rem 4rem;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.tech_texts {
+  height: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 2.4rem;
+}
+.tech_texts h5 {
+  font-size: 16px;
+}
+.tech_texts h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 1.2rem;
+}
+.tech_texts p {
+  font-size: 12px;
+  font-weight: 600;
+  color: gray;
+}
+/* Technical Specifications */
+/* ############ Murud Page ############ */
